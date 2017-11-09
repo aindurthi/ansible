@@ -1,0 +1,9 @@
+---
+- hosts: webservers
+  remote_user: root
+  gather_facts: False
+  tasks:
+  - name: running command
+    command: date 
+    register: git
+  - debug: var=git.stdout
